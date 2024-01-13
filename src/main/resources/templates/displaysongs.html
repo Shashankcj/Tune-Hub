@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html >
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<style type="text/css">
+
+
+
+</style>
+<body>
+<h3>Viewing the song here</h3>
+
+<table border=1>
+<tr>
+	<th>Name</th>
+	<th>Artist</th>
+	<th>Genere</th>
+	<th>Play</th>
+</tr>
+<tr th:each="song:${songs}">
+	<td th:text="${song.name}"></td>
+	<td th:text="${song.artist}"></td>
+	<td th:text="${song.genere}"></td>
+	<td >
+	<audio th:src="${song.link}" controls type="audio/mpeg" muted>
+	</audio>
+	
+	</td>
+</tr>
+
+</table>
+</body>
+</html>
